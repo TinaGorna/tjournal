@@ -60,7 +60,6 @@ export const Post: React.FC = () => {
           </IconButton>
         </li>
       </ul>
-
     </Paper>
   )
 }
