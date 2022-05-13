@@ -3,7 +3,6 @@ import {Paper, Button, IconButton, Avatar} from "@material-ui/core";
 import styles from "./Header.module.scss";
 import SearchIcon from "@material-ui/icons/Search"
 import Link from "next/link"
-import CreateIcon from "@material-ui/icons/Create"
 import MenuIcon from "@material-ui/icons/Menu"
 import {SmsOutlined, ExpandMoreOutlined} from "@material-ui/icons";
 import NotificationIcon from "@material-ui/icons/NotificationsNoneOutlined"
