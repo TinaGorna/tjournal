@@ -44,7 +44,8 @@ export const Header: React.FC = () => {
             <Avatar
               className={styles.avatar}
               alt="Avatar"
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsmr1u2RAzYkqgGepYTCIReEOkqGLHqguw3Q&usqp=CAU"/>
+              src="https://avatars.mds.yandex.net/get-images-cbir/1767370/4makraH-DdsvIjexVtwtMg5808/ocr"/>
+
             <ExpandMoreOutlined/>
           </a>
         </Link>
