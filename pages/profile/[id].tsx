@@ -39,7 +39,7 @@ export default function Profile() {
                     <Typography style={{fontWeight: "bold"}}>+208</Typography>
                     <Typography>2 подписичика</Typography>
                     <Typography>На проекте с 15 сентября 2022</Typography>
-                    <Tabs className="mt-20" value={0}>
+                    <Tabs className="mt-20" value={0} indicatorColor={"primary"}>
                         <Tab label="Статьи"/>
                         <Tab label="Комментарии"/>
                         <Tab label="Закладки"/>
