@@ -26,6 +26,14 @@ export default function Settings() {
             variant="outlined"
             fullWidth
           />
+          <TextField
+              className="mb-20"
+              size="small"
+              required
+              label="Password"
+              variant="outlined"
+              fullWidth
+          />
           <Divider className="mt-20 mb-30"/>
           <Button color="primary" variant="contained">Save changes</Button>
         </form>

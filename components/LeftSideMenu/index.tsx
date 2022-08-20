@@ -12,9 +12,9 @@ import styles from "./LeftSideMenu.module.scss";
 
 const menu = [
     {text: "News feed", icon: <WhatshotOutlined/>, path: "/"},
-    {text: "Messages", icon: <SmsOutlined/>, path: "/"},
-    {text: "Rating TJ", icon: <TrendingUpOutlined/>, path: "/"},
-    {text: "Subscriptions", icon: <FormatListBulletedOutlined/>, path: "/"},
+    {text: "Messages", icon: <SmsOutlined/>, path: "/messages"},
+    {text: "Rating TJ", icon: <TrendingUpOutlined/>, path: "/rating"},
+    {text: "Subscriptions", icon: <FormatListBulletedOutlined/>, path: "/follows"},
 ]
 
 export const LeftSideMenu: React.FC = () => {

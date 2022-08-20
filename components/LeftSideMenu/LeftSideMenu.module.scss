@@ -1,10 +1,6 @@
 .menu {
-  //position: fixed;
-  //width: 200px;
-  //left: 15px;
-  //top: 70px;
-
-  position: sticky;
+  display: flex;
+  position: absolute;
   top: 80px;
   width: 200px;
 
