@@ -10,8 +10,9 @@ import {
     TableRow,
     Tab,
     Tabs,
-    Typography
+    Typography, Button
 } from "@material-ui/core";
+import {FollowButton} from "../components/FollowButton";
 
 export default function Rating() {
     return (
@@ -28,20 +29,25 @@ export default function Rating() {
                 </Tabs>
             </Paper>
 
-            <Paper className="pl-20 pt-20 pr-20" elevation={0}>
+            <Paper elevation={0}>
                 <Table aria-label="simple table">
                     <TableHead>
                         <TableRow>
                             <TableCell>User Name</TableCell>
                             <TableCell align="right">Rating</TableCell>
+                            <TableCell align="right"></TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         <TableRow>
                             <TableCell component="th" scope="row">
+                                <span className="mr-15">1</span>
                                 Tasya
                             </TableCell>
                             <TableCell align="right">540</TableCell>
+                            <TableCell align="right">
+                                <FollowButton/>
+                            </TableCell>
                         </TableRow>
                     </TableBody>
                 </Table>
