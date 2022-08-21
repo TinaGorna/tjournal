@@ -1,5 +1,7 @@
 import React from "react";
-import {Paper, Typography} from "@material-ui/core";
+import {Button, Paper, Typography} from "@material-ui/core";
+import TextsmsOutlinedIcon from "@material-ui/icons/TextsmsOutlined"
+import PersonAddOutlinedIcon from "@material-ui/icons/PersonAddOutlined";
 import styles from "./FullPost.module.scss"
 import {PostActions} from "../PostActions";
 
@@ -39,18 +41,30 @@ export const FullPost = () => {
                     </Typography>
                     <div
                         style={{
-                            width: 250
+                            width: 250,
+                            marginLeft: 14,
                         }}
                     >
                         <PostActions/>
                     </div>
-                    <div
-                    className={styles.userInfo}
-                    >
-                        <img
-                            src="https://coolsen.ru/wp-content/uploads/2021/06/14-4.jpg" alt="Avatar"/>
-                        <b>Donnie Darko</b>
-                        <span>+1685</span>
+                    <div className="d-flex justify-between align-center mt-30 mb-30">
+                        <div
+                            className={styles.userInfo}
+                        >
+                            <img
+                                src="https://coolsen.ru/wp-content/uploads/2021/06/14-4.jpg" alt="Avatar"/>
+                            <b>Donnie Darko</b>
+                            <span>+1685</span>
+                        </div>
+                        <div>
+                            <Button variant="contained" className="mr-15">
+                                <TextsmsOutlinedIcon/>
+                            </Button>
+                            <Button variant="contained">
+                                <PersonAddOutlinedIcon/>
+                                <b className="ml-10">Follow</b>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </div>
