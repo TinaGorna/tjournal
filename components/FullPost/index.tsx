@@ -4,16 +4,13 @@ import styles from "./FullPost.module.scss"
 
 export const FullPost = () => {
     return (
-        <Paper elevation={0} className={styles.paper} style={{
-            marginTop: -30
-        }}>
+        <Paper elevation={0} className={styles.paper}>
             <div style={{
                 margin: "0 auto",
                 width: 680,
             }}>
-                <Typography variant="h4" style={{
-                    fontWeight: 500
-                }}>
+                <Typography variant="h4"
+                            className={styles.title}>
                     Sega снимет полнометражные фильмы по двум играм 1990-х годов
                 </Typography>
                 <Typography>

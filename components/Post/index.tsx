@@ -1,24 +1,19 @@
 import React from "react";
 import Link from "next/link"
 import {IconButton, Paper, Typography} from "@material-ui/core";
-import {
-    ModeCommentOutlined as CommentsIcon,
-    RepeatOutlined as RepostIcon,
-    BookmarkBorderOutlined as FavoriteIcon,
-    ShareOutlined as ShareIcon
-}
-    from "@material-ui/icons";
+
 import Image from "next/image";
 import styles from "./Post.module.scss";
+import {PostActions} from "../PostActions";
 
 export const Post: React.FC = () => {
     return (
         <Paper elevation={0} className="p-20" classes={{root: styles.paper}}>
             <Typography variant="h5" className={styles.title}>
                 <Link href={"/news/news"}>
-                As tourism has impacted parts of Seychelles' environment, the island nation
-                now aims to protect its 72 low-lying coralline "Outer Islands" from development before it's too
-                late.
+                    As tourism has impacted parts of Seychelles' environment, the island nation
+                    now aims to protect its 72 low-lying coralline "Outer Islands" from development before it's too
+                    late.
                 </Link>
             </Typography>
 
@@ -39,30 +34,7 @@ export const Post: React.FC = () => {
                 height={400}
                 width={600}
             />
-
-            <ul className={styles.actions}>
-                <li>
-                    <IconButton>
-                        <CommentsIcon/>
-                    </IconButton>
-
-                </li>
-                <li>
-                    <IconButton>
-                        <RepostIcon/>
-                    </IconButton>
-                </li>
-                <li>
-                    <IconButton>
-                        <FavoriteIcon/>
-                    </IconButton>
-                </li>
-                <li>
-                    <IconButton>
-                        <ShareIcon/>
-                    </IconButton>
-                </li>
-            </ul>
+            <PostActions/>
         </Paper>
     )
 }
