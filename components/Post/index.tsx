@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link"
 import {IconButton, Paper, Typography} from "@material-ui/core";
 import {
     ModeCommentOutlined as CommentsIcon,
@@ -14,9 +15,11 @@ export const Post: React.FC = () => {
     return (
         <Paper elevation={0} className="p-20" classes={{root: styles.paper}}>
             <Typography variant="h5" className={styles.title}>
+                <Link href={"/news/news"}>
                 As tourism has impacted parts of Seychelles' environment, the island nation
                 now aims to protect its 72 low-lying coralline "Outer Islands" from development before it's too
                 late.
+                </Link>
             </Typography>
 
             <Typography className="mt-10 mb-15">
