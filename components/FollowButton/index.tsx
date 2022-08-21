@@ -9,7 +9,7 @@ export const FollowButton: React.FC = () => {
         <Button
             onClick={() => setFollowed(!followed)} variant={"contained"}
             style={{minWidth: 30, width: 40, height: 30}}>
-            {!followed ? <AddIcon/> : <CheckOutlinedIcon/>}
+            {!followed ? <AddIcon/> : <CheckOutlinedIcon style={{fontSize: 20, color: "#2ea83a"}}/>}
         </Button>
     )
 }

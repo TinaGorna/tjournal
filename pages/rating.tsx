@@ -16,11 +16,12 @@ import {FollowButton} from "../components/FollowButton";
 
 export default function Rating() {
     return (
-        <MainLayout hideComments>
+        <MainLayout>
             <Paper className="pl-20 pt-20 pr-20 mb-20" elevation={0}>
                 <Typography variant="h5" style={{fontWeight: "bold", fontSize: 30, marginBottom: 6}}>Rating of
                     communities and blogs</Typography>
-                <Typography>Десять лучших автором и комментаторов, а также администраторы первых десяти сообществ из
+                <Typography style={{fontSize: 15}}>Десять лучших автором и комментаторов, а также администраторы первых
+                    десяти сообществ из
                     рейтинга по итогам месяца бесплатно получают Plus-аккаунт на месяц.</Typography>
                 <Tabs className="mt-10" value={0} indicatorColor={"primary"}>
                     <Tab label="Август"/>

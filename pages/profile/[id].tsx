@@ -37,9 +37,29 @@ export default function Profile() {
                 </div>
                 <div className="d-flex mb-10 mt-10">
                     <Typography style={{fontWeight: "bold"}}>+208</Typography>
-                    <Typography>2 подписичика</Typography>
-                    <Typography>На проекте с 15 сентября 2022</Typography>
-                    <Tabs className="mt-20" value={0} indicatorColor={"primary"}>
+                    <Typography
+                        style={{
+                            display: "flex",
+                            position: "absolute",
+                            left: "462px",
+                        }}
+                    >2 подписчика</Typography>
+                    <Typography className="mt-20"
+                        //             style={{
+                        //     display: "flex",
+                        //     position: "absolute",
+                        //     bottom: "41px",
+                        // }}
+                    >На проекте с 15 сентября 2022</Typography>
+                    <Tabs className="mt-20" value={0} indicatorColor={"primary"}
+                        // style={{
+                        //     overflow: "hidden",
+                        //     display: "flex",
+                        //     position: "absolute",
+                        //     bottom: "-12px",
+                        //     left: "402px",
+                        // }}
+                    >
                         <Tab label="Статьи"/>
                         <Tab label="Комментарии"/>
                         <Tab label="Закладки"/>
