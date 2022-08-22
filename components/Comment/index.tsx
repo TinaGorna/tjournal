@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {IconButton, Typography} from "@material-ui/core";
+import {IconButton, Menu, MenuItem, Typography} from "@material-ui/core";
 import MoreHorizOutlinedIcon from "@material-ui/icons/MoreHorizOutlined";
 import styles from "./Comment.module.scss"
 
@@ -37,6 +37,15 @@ export const Comment: React.FC<CommentProps> = () => {
             <IconButton>
                 <MoreHorizOutlinedIcon/>
             </IconButton>
+
+            <Menu
+                anchorEl={anchorEl}
+                elevation={2}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}>
+                <MenuItem onClick={handleClose}>Удалить</MenuItem>
+                <MenuItem onClick={handleClose}>Редактировать</MenuItem>
+            </Menu>
         </div>
     )
 }
