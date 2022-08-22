@@ -13,13 +13,14 @@ interface CommentProps {
 
 export const Comment: React.FC<CommentProps> = () => {
 
-    const [anchorEl, setAnchorEl] = useState()
+    const [anchorEl, setAnchorEl] = useState(null)
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget)
     }
     const handleClose = () => {
         setAnchorEl(null)
     }
+
     return (
         <div className={styles.comment}>
             <div className={styles.userInfo}>
@@ -33,8 +34,8 @@ export const Comment: React.FC<CommentProps> = () => {
             </Typography>
             <span
                 className={styles.replyButton}
-            >Reply</span>
-            <IconButton>
+            >Ответить</span>
+            <IconButton onClick={handleClick}>
                 <MoreHorizOutlinedIcon/>
             </IconButton>
 
