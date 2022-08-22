@@ -5,8 +5,8 @@ import {Comment} from "../Comment";
 type Comment = {
     text: string
     id: number
-    createdAt: string
-    user: {
+    createdAt?: string
+    user?: {
         fullName: string
         avatar: string
     }

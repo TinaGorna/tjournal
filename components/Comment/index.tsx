@@ -8,7 +8,7 @@ interface CommentProps {
         fullName: string
     }
     text?: string
-    createdAt: string
+    createdAt?: string
 }
 
 export const Comment: React.FC<CommentProps> = ({user, text, createdAt}) => {

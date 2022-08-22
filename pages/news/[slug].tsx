@@ -1,14 +1,14 @@
 import * as React from "react"
 import {MainLayout} from "../../layouts/MainLayout";
 import {FullPost} from "../../components/FullPost";
-import {Divider, Paper, Tab, Tabs, Typography} from "@material-ui/core";
-import {Comment} from "../../components/Comment";
+import {PostComments} from "../../components/PostComments";
+import {comments} from "../../components/SideComments";
 
-export default function Home() {
+export default function Post() {
     return (
         <MainLayout className="mb-50" contentFullWidth>
             <FullPost/>
-
+            <PostComments items={comments}/>
         </MainLayout>
     )
 }
