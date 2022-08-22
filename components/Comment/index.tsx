@@ -8,10 +8,10 @@ interface CommentProps {
         fullName: string
     }
     text?: string
-
+    createdAt: string
 }
 
-export const Comment: React.FC<CommentProps> = () => {
+export const Comment: React.FC<CommentProps> = ({user, text, createdAt}) => {
 
     const [anchorEl, setAnchorEl] = useState(null)
     const handleClick = (event) => {
@@ -27,7 +27,7 @@ export const Comment: React.FC<CommentProps> = () => {
                 <img src="https://coolsen.ru/wp-content/uploads/2021/06/14-4.jpg" alt="Avatar"
                 />
                 <b>Master Oogway</b>
-                <span>5 h</span>
+                <span>{createdAt}</span>
             </div>
             <Typography className={styles.text}>
                 Я оценил, годные работы, рекомендую к просмотру
