@@ -4,8 +4,10 @@ import MoreHorizOutlinedIcon from "@material-ui/icons/MoreHorizOutlined";
 import styles from "./Comment.module.scss"
 
 interface CommentProps {
+    id: number
     user?: {
         fullName: string
+        avatar: string
     }
     text?: string
     createdAt?: string
@@ -24,13 +26,13 @@ export const Comment: React.FC<CommentProps> = ({user, text, createdAt}) => {
     return (
         <div className={styles.comment}>
             <div className={styles.userInfo}>
-                <img src="https://coolsen.ru/wp-content/uploads/2021/06/14-4.jpg" alt="Avatar"
+                <img src={user.avatar} alt="Avatar"
                 />
-                <b>Master Oogway</b>
+                <b>{user.fullName}</b>
                 <span>{createdAt}</span>
             </div>
             <Typography className={styles.text}>
-                Я оценил, годные работы, рекомендую к просмотру
+                {text}
             </Typography>
             <span
                 className={styles.replyButton}

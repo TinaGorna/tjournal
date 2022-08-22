@@ -27,3 +27,13 @@ a {
 .wrapper {
     padding-top: 75px;
 }
+
+.main-layout-white {
+    background-color: #fff;
+    height: 100vh;
+}
+
+.container {
+    margin: 0 auto;
+    width: 680px;
+}
