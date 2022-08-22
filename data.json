@@ -1,0 +1,68 @@
+{
+  "comments": {
+    "popular": [
+      {
+        "id": 1,
+        "user": {
+          "fullName": "Vasya",
+          "avatar": "https://avatars.mds.yandex.net/i?id=ede79fa87f5de70e92fbe04d4215d214_l-5486213-images-thumbs&ref=rim&n=13&w=1080&h=1080"
+        },
+        "text": "Теперь каждое утро после кровати я перекладываюсь туда еще",
+        "post": {
+          "title": "Какая у вас дома ванна,"
+        },
+        "createdAt": "Wed Aug 22 2022 17:11:37 GMT +0300 (Москва, стандартное время)"
+      },
+      {
+        "id": 2,
+        "user": {
+          "fullName": "Pusya",
+          "avatar": "https://i.pinimg.com/originals/43/41/06/4341068ff814413d0e51b776aec1c021.jpg"
+        },
+        "text": "Теперь каждое утро после кровати я перекладываюсь туда еще",
+        "post": {
+          "title": "Какая у вас дома ванна,"
+        },
+        "createdAt": "Wed Aug 22 2022 17:11:37 GMT +0300 (Москва, стандартное время)"
+      },
+      {
+        "id": 3,
+        "user": {
+          "fullName": "Tasya",
+          "avatar": "https://coolsen.ru/wp-content/uploads/2021/12/65-20211209_141440.jpg"
+        },
+        "text": "Теперь каждое утро после кровати я перекладываюсь туда еще",
+        "post": {
+          "title": "Какая у вас дома ванна,"
+        },
+        "createdAt": "Wed Aug 22 2022 17:11:37 GMT +0300 (Москва, стандартное время)"
+      }
+    ],
+    "new": [
+      {
+        "id": 2,
+        "user": {
+          "fullName": "Pusya",
+          "avatar": "https://i.pinimg.com/originals/43/41/06/4341068ff814413d0e51b776aec1c021.jpg"
+        },
+        "text": "Теперь каждое утро после кровати я перекладываюсь туда еще",
+        "post": {
+          "title": "Какая у вас дома ванна,"
+        },
+        "createdAt": "Wed Aug 22 2022 17:11:37 GMT +0300 (Москва, стандартное время)"
+      },
+      {
+        "id": 3,
+        "user": {
+          "fullName": "Tasya",
+          "avatar": "https://coolsen.ru/wp-content/uploads/2021/12/65-20211209_141440.jpg"
+        },
+        "text": "Теперь каждое утро после кровати я перекладываюсь туда еще",
+        "post": {
+          "title": "Какая у вас дома ванна,"
+        },
+        "createdAt": "Wed Aug 22 2022 17:11:37 GMT +0300 (Москва, стандартное время)"
+      }
+    ]
+  }
+}
