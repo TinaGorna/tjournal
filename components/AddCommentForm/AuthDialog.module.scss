@@ -16,7 +16,7 @@
 
 .title {
   font-size: 18px;
-  margin-bottom: 15px !important;
+  margin-bottom: 25px !important;
   color: black !important;
   font-weight: 500 !important;
 }
@@ -35,5 +35,21 @@
     svg {
       position: static;
     }
+  }
+}
+
+.backTitle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    color: #4683d9;
+  }
+
+  svg {
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
   }
 }

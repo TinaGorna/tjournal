@@ -3,17 +3,13 @@ import {
     Paper,
     Button,
     IconButton,
-    Avatar,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogContentText, DialogActions, Typography
 } from "@material-ui/core";
 import styles from "./Header.module.scss";
 import SearchIcon from "@material-ui/icons/Search"
 import Link from "next/link"
 import MenuIcon from "@material-ui/icons/Menu"
-import {SmsOutlined, ExpandMoreOutlined} from "@material-ui/icons";
+import {SmsOutlined, AccountCircleOutlined as UserIcon} from "@material-ui/icons";
+
 import NotificationIcon from "@material-ui/icons/NotificationsNoneOutlined"
 import {AuthDialog} from "../AuthDialog";
 
@@ -21,10 +17,10 @@ export const Header: React.FC = () => {
 
     const [authVisible, setAuthVisible] = React.useState(false)
 
-    const handleClickOpen = () => {
+    const openAuthDialog = () => {
         setAuthVisible(true)
     }
-    const handleClose = () => {
+    const closeAuthDialog = () => {
         setAuthVisible(false)
     }
 
@@ -60,24 +56,28 @@ export const Header: React.FC = () => {
 
             </div>
             <div className="d-flex align-center">
-                <IconButton onClick={handleClickOpen}>
+                <IconButton>
                     <SmsOutlined/>
                 </IconButton>
                 <IconButton>
                     <NotificationIcon/>
                 </IconButton>
-                <Link href="/profile/1">
-                    <a className="d-flex align-center">
-                        <Avatar
-                            className={styles.avatar}
-                            alt="Avatar"
-                            src="https://i.etsystatic.com/11663546/r/il/45f4d5/1893120597/il_570xN.1893120597_ag77.jpg"/>
+                {/*<Link href="/profile/1">*/}
+                {/*    <a className="d-flex align-center">*/}
+                {/*        <Avatar*/}
+                {/*            className={styles.avatar}*/}
+                {/*            alt="Avatar"*/}
+                {/*            src="https://i.etsystatic.com/11663546/r/il/45f4d5/1893120597/il_570xN.1893120597_ag77.jpg"/>*/}
 
-                        <ExpandMoreOutlined/>
-                    </a>
-                </Link>
+                {/*        <ExpandMoreOutlined/>*/}
+                {/*    </a>*/}
+                {/*</Link>*/}
+                <div className={styles.loginButton} onClick={openAuthDialog}>
+                    <UserIcon/>
+                    Войти
+                </div>
             </div>
-            <AuthDialog onClose={handleClose} visible={authVisible}/>
+            <AuthDialog onClose={closeAuthDialog} visible={authVisible}/>
         </Paper>
     )
 }
