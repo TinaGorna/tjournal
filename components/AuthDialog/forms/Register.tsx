@@ -13,7 +13,7 @@ interface RegisterProps {
 export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin}) => {
 
     const form = useForm({
-        mode: "onSubmit",
+        mode: "onChange",
         resolver: yupResolver(RegisterFormSchema)
     })
     const onSubmit = data => console.log(data)
@@ -26,7 +26,10 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
                 <FormField name="password" label="Пароль"/>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <div className="d-flex align-center justify-between">
-                        <Button onClick={onOpenRegister} color="primary" variant="contained">Зарегестрироваться</Button>
+                        <Button
+                            onClick={onOpenRegister}
+                            disabled={!form.formState.isValid}
+                            color="primary" variant="contained">Зарегестрироваться</Button>
                         <Button onClick={onOpenLogin} color="primary" variant="text">Войти</Button>
                     </div>
                 </form>
