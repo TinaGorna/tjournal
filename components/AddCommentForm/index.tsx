@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, Input} from "@material-ui/core";
-import styles from "./AddCommentForm.module.scss"
+import styles from "./AuthDialog.module.scss"
 
 interface AddCommentFormProps {
 

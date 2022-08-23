@@ -10,7 +10,7 @@ function MyApp({Component, pageProps}) {
   return (
     <>
       <Head>
-        <title>RJournal</title>
+        <title>TJournal</title>
         <link rel="icon" href="/favicon.ico"/>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>

@@ -4,6 +4,7 @@
       {
         "id": 1,
         "user": {
+          "id": 1,
           "fullName": "Vasya",
           "avatar": "https://avatars.mds.yandex.net/i?id=ede79fa87f5de70e92fbe04d4215d214_l-5486213-images-thumbs&ref=rim&n=13&w=1080&h=1080"
         },
@@ -16,6 +17,7 @@
       {
         "id": 2,
         "user": {
+          "id": 1,
           "fullName": "Pusya",
           "avatar": "https://i.pinimg.com/originals/43/41/06/4341068ff814413d0e51b776aec1c021.jpg"
         },
@@ -28,6 +30,7 @@
       {
         "id": 3,
         "user": {
+          "id": 1,
           "fullName": "Tasya",
           "avatar": "https://coolsen.ru/wp-content/uploads/2021/12/65-20211209_141440.jpg"
         },
@@ -42,6 +45,7 @@
       {
         "id": 2,
         "user": {
+          "id": 1,
           "fullName": "Pusya",
           "avatar": "https://i.pinimg.com/originals/43/41/06/4341068ff814413d0e51b776aec1c021.jpg"
         },

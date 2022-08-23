@@ -1,0 +1,39 @@
+.content {
+  width: 70%;
+  margin: 30px auto;
+
+  button {
+    position: relative;
+
+    svg {
+      position: absolute;
+      left: 10px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.title {
+  font-size: 18px;
+  margin-bottom: 15px !important;
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+.miniButtons {
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    height: 40px !important;
+
+    &:nth-of-type(2) { //для второй кнопки
+      margin: 0 15px;
+    }
+
+    svg {
+      position: static;
+    }
+  }
+}

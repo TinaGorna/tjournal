@@ -5,12 +5,11 @@ import {
     Table,
     TableBody,
     TableCell,
-    TableContainer,
     TableHead,
     TableRow,
     Tab,
     Tabs,
-    Typography, Button
+    Typography
 } from "@material-ui/core";
 import {FollowButton} from "../components/FollowButton";
 

@@ -7,7 +7,7 @@ import {SideComments} from "../components/SideComments"
 interface MainLayoutProps {
     hideComments?: boolean
     contentFullWidth?: boolean
-    className: string
+    className?: string
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
