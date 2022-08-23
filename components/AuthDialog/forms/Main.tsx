@@ -1,6 +1,6 @@
 import React from "react";
 import {Button} from "@material-ui/core";
-import styles from "*.module.scss";
+import styles from "../../AddCommentForm/AuthDialog.module.scss"
 
 interface MainFormProps {
     onOpenLogin: () => void

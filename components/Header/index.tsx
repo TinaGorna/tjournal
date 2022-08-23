@@ -9,7 +9,6 @@ import SearchIcon from "@material-ui/icons/Search"
 import Link from "next/link"
 import MenuIcon from "@material-ui/icons/Menu"
 import {SmsOutlined, AccountCircleOutlined as UserIcon} from "@material-ui/icons";
-
 import NotificationIcon from "@material-ui/icons/NotificationsNoneOutlined"
 import {AuthDialog} from "../AuthDialog";
 
