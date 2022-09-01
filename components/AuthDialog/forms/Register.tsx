@@ -1,9 +1,12 @@
 import React from "react";
+import {setCookie} from "nookies";
 import {Button} from "@material-ui/core";
 import {FormField} from "../../FormField";
 import {useForm, FormProvider} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {RegisterFormSchema} from "../../../utils/validations";
+import {CreateUserDto} from "../../../utils/api/types";
+import {UserApi} from "../../../utils/api";
 
 interface RegisterProps {
     onOpenRegister: () => void
@@ -16,7 +19,19 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
         mode: "onChange",
         resolver: yupResolver(RegisterFormSchema)
     })
-    const onSubmit = data => console.log(data)
+
+    const onSubmit = async (dto: CreateUserDto) => {
+        try {
+            const data = await UserApi.register(dto)
+            setCookie(null, "authToken", data.token, {
+                maxAge: 30 * 24 * 60 * 60, //save token for 30 days
+                path: "/", // on a main path
+            })
+        } catch (err) {
+            alert("Ошибка при регистрации")
+            console.warn("Register error", err)
+        }
+    }
 
     return (
         <div>
@@ -28,7 +43,7 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
                     <div className="d-flex align-center justify-between">
                         <Button
                             onClick={onOpenRegister}
-                            disabled={!form.formState.isValid}
+                            disabled={!form.formState.isValid || form.formState.isSubmitting}
                             color="primary" variant="contained">Зарегестрироваться</Button>
                         <Button onClick={onOpenLogin} color="primary" variant="text">Войти</Button>
                     </div>

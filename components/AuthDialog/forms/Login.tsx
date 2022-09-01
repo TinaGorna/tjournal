@@ -1,9 +1,12 @@
 import React from "react";
-import {Button, TextField} from "@material-ui/core";
+import {Button} from "@material-ui/core";
 import {useForm, FormProvider} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {LoginFormSchema} from "../../../utils/validations";
 import {FormField} from "../../FormField";
+import {CreateUserDto, LoginDto} from "../../../utils/api/types";
+import {UserApi} from "../../../utils/api";
+import {setCookie} from "nookies";
 
 interface LoginProps {
     onOpenRegister: () => void
@@ -15,7 +18,19 @@ export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
         mode: "onChange",
         resolver: yupResolver(LoginFormSchema)
     })
-    const onSubmit = data => console.log(data)
+
+    const onSubmit = async (dto: LoginDto) => {
+        try {
+            const data = await UserApi.login(dto)
+            setCookie(null, "authToken", data.token, {
+                maxAge: 30 * 24 * 60 * 60, //save token for 30 days
+                path: "/", // on a main path
+            })
+        } catch (err) {
+            alert("Ошибка при регистрации")
+            console.warn("Register error", err)
+        }
+    }
 
     return (
         <div>
@@ -25,7 +40,7 @@ export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
                     <FormField name="password" label="Пароль"/>
                     <div className="d-flex align-center justify-between">
                         <Button
-                            disabled={!form.formState.isValid}
+                            disabled={!form.formState.isValid || form.formState.isSubmitting}
                             type="submit"
                             color="primary"
                             variant="contained">Войти</Button>
