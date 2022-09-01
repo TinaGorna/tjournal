@@ -45,7 +45,8 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
                 <FormField name="fullName" label="Имя и фамилия"/>
                 <FormField name="email" label="Почта"/>
                 <FormField name="password" label="Пароль"/>
-                {/*{errorMessage && (<Alert severity="error"/>)}*/}
+                {/*<Alert className="mb-20" severity="error">{errorMessage}</Alert>*/}
+                {/*)}*/}
 
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <div className="d-flex align-center justify-between">
