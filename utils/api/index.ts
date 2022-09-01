@@ -10,7 +10,7 @@ export const UserApi = {
         const {data} = await instance.post<CreateUserDto, { data: ResponseUser }>("/auth/register", dto)
         return data
     },
-    async login(dto: LoginDto) {
+    async login(dto: LoginDto): Promise<ResponseUser> {
         const {data} = await instance.post<LoginDto, { data: ResponseUser }>("/auth/login", dto)
         return data
     }

@@ -4,7 +4,7 @@ export type LoginDto = {
 }
 
 export type CreateUserDto = {
-    fullName: string
+    fullName?: string
 } & LoginDto
 
 export type ResponseUser = {
