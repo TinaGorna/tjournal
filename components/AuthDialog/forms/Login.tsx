@@ -8,7 +8,6 @@ import {FormField} from "../../FormField";
 import {LoginDto} from "../../../utils/api/types";
 import {UserApi} from "../../../utils/api";
 import {setCookie} from "nookies";
-import {Alert} from "@material-ui/lab";
 
 interface LoginProps {
     onOpenRegister: () => void
@@ -45,7 +44,7 @@ export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField name="email" label="Почта"/>
                     <FormField name="password" label="Пароль"/>
-                    {errorMessage && (<Alert severity="error"/>)}
+                    {/*{errorMessage && (<Alert severity="error"/>)}*/}
                     {/*{errorMessage && (*/}
                     {/*    <Alert className="mb-20" severity="error">{errorMessage}</Alert>*/}
                     {/*)}*/}
