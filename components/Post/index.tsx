@@ -1,8 +1,6 @@
 import React from "react";
 import Link from "next/link"
-import {IconButton, Paper, Typography} from "@material-ui/core";
-
-import Image from "next/image";
+import {Paper, Typography} from "@material-ui/core";
 import styles from "./Post.module.scss";
 import {PostActions} from "../PostActions";
 
@@ -29,7 +27,7 @@ export const Post: React.FC = () => {
                 small nation can become an example for the many other insular countries facing the effects of
                 climate change. Hopefully, it's not too late.
             </Typography>
-            <Image
+            <img
                 src="https://s4.files.enjourney.ru/upload/a57eae99c47afc12c3bc47d3e81f98f9/1920x0/e17dc93f772366237944059c24d11012.jpg"
                 height={400}
                 width={600}

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {IconButton, Menu, MenuItem, Typography} from "@material-ui/core";
 import MoreHorizOutlinedIcon from "@material-ui/icons/MoreHorizOutlined";
 import styles from "./Comment.module.scss"
+import Image from "next/image"
 
 interface CommentProps {
     id: number

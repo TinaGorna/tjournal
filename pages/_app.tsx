@@ -5,10 +5,10 @@ import "../styles/globals.css"
 import "macro-css"
 import Head from "next/head";
 import {Provider} from "react-redux";
-// import {store} from "../redux/store";
+ import {store} from "../redux/store";
 import {AppProps} from "next/app";
 
-function MyApp({Component, pageProps}) {
+function MyApp({Component, pageProps}: AppProps) {
     return (
         <>
             <Head>
@@ -22,10 +22,10 @@ function MyApp({Component, pageProps}) {
             </Head>
             <MuiThemeProvider theme={theme}>
                 <CssBaseline/>
-                {/*<Provider store={store}>*/}
-                {/*    <Header/>*/}
-                {/*    <Component {...pageProps}/>*/}
-                {/*</Provider>*/}
+                <Provider store={store}>
+                    <Header/>
+                    <Component {...pageProps}/>
+                </Provider>
             </MuiThemeProvider>
         </>
     )
