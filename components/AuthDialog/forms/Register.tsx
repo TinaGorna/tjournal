@@ -8,6 +8,9 @@ import {RegisterFormSchema} from "../../../utils/validations";
 import {LoginDto} from "../../../utils/api/types";
 import {UserApi} from "../../../utils/api";
 import {Alert} from "@material-ui/lab";
+import {setUserData} from "../../../redux/slices/user";
+import {useDispatch} from "react-redux";
+import {useAppDispatch} from "../../../redux/hooks";
 
 interface RegisterProps {
     onOpenRegister: () => void
@@ -16,6 +19,7 @@ interface RegisterProps {
 
 export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin}) => {
 
+    const dispatch = useAppDispatch()
     const [errorMessage, setErrorMessage] = React.useState("")
 
     const form = useForm({
@@ -31,6 +35,7 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
                 path: "/", // on a main path
             })
             setErrorMessage("")
+            dispatch(setUserData(data))
         } catch (err) {
             console.warn("Register error", err)
             if (err.response) {
@@ -45,8 +50,7 @@ export const Register: React.FC<RegisterProps> = ({onOpenRegister, onOpenLogin})
                 <FormField name="fullName" label="Имя и фамилия"/>
                 <FormField name="email" label="Почта"/>
                 <FormField name="password" label="Пароль"/>
-                {/*<Alert className="mb-20" severity="error">{errorMessage}</Alert>*/}
-                {/*)}*/}
+                <Alert className="mb-20" severity="error">{errorMessage}</Alert>
 
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <div className="d-flex align-center justify-between">

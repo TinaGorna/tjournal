@@ -1,6 +1,6 @@
 import React from "react";
 import {Button} from "@material-ui/core";
-// import Alert from "@material-ui/lab";
+import {Alert} from "@material-ui/lab";
 import {useForm, FormProvider} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
 import {LoginFormSchema} from "../../../utils/validations";
@@ -8,6 +8,8 @@ import {FormField} from "../../FormField";
 import {LoginDto} from "../../../utils/api/types";
 import {UserApi} from "../../../utils/api";
 import {setCookie} from "nookies";
+import {useAppDispatch} from "../../../redux/hooks";
+import {setUserData} from "../../../redux/slices/user";
 
 interface LoginProps {
     onOpenRegister: () => void
@@ -15,6 +17,7 @@ interface LoginProps {
 
 export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
 
+    const dispatch = useAppDispatch()
     const [errorMessage, setErrorMessage] = React.useState("")
 
     const form = useForm({
@@ -30,6 +33,7 @@ export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
                 path: "/", // on a main path
             })
             setErrorMessage("")
+            dispatch(setUserData(data))
         } catch (err) {
             console.warn("Register error", err)
             if (err.response) {
@@ -44,10 +48,11 @@ export const Login: React.FC<LoginProps> = ({onOpenRegister}) => {
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField name="email" label="Почта"/>
                     <FormField name="password" label="Пароль"/>
-                    {/*{errorMessage && (<Alert severity="error"/>)}*/}
-                    {/*{errorMessage && (*/}
-                    {/*    <Alert className="mb-20" severity="error">{errorMessage}</Alert>*/}
-                    {/*)}*/}
+
+                    {errorMessage && (
+                        <Alert className="mb-20" severity="error">{errorMessage}</Alert>
+                    )}
+
                     <div className="d-flex align-center justify-between">
                         <Button
                             disabled={!form.formState.isValid || form.formState.isSubmitting}
