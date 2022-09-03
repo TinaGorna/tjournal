@@ -1,6 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {ResponseUser} from "../../utils/api/types";
 import {RootState} from "../store";
+import {HYDRATE} from "next-redux-wrapper"
 
 export interface UserState {
     data: ResponseUser | null
@@ -18,6 +19,14 @@ export const userSlice = createSlice({
             state.data = action.payload
         }
     },
+    extraReducers: {
+        [HYDRATE]: (state, action) => { //когда произойдет гидрация, акшн пейлоад вернет все редьюсеры. Мы вытаскиваем редьюсер юзера, из которого берем дата
+            return {
+                ...state,
+                ...action.payload.user,
+            }
+        }
+    }
 })
 
 export const {setUserData} = userSlice.actions
